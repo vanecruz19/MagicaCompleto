@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".EdicionFragment">
+
+
+    <!-- fragment_editar_perfil.xml -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:textColorHint="#B10101"
+            android:fontFamily="@font/titulos"
+            android:layout_height="wrap_content"
+            android:hint="Nombre" />
+
+        <EditText
+            android:id="@+id/editTextEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/titulos"
+            android:textColor="@color/white"
+            android:textColorHint="#B10101"
+            android:layout_below="@+id/editTextNombre"
+            android:hint="Edad" />
+
+        <EditText
+            android:id="@+id/editTextTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/titulos"
+            android:textColorHint="#B10101"
+            android:layout_below="@+id/editTextEdad"
+            android:hint="Teléfono" />
+
+        <!-- Otros elementos para la edición del perfil -->
+
+        <EditText
+            android:id="@+id/editTextCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:fontFamily="@font/titulos"
+            android:layout_below="@+id/editTextTelefono"
+            android:hint="Correo"
+            android:textColor="@color/white"
+            android:textColorHint="#B10101" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar Cambios"
+            android:fontFamily="@font/titulos"
+            android:backgroundTint="#8B0000"
+            android:layout_below="@id/editTextCorreo"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</FrameLayout>
+

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="@color/black"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".MainActivity">
+
+    <!-- Contenido principal dentro de NestedScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:elevation="4dp"
+                    android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            </FrameLayout>
+
+            <!-- Contenido de ConstraintLayout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraintLayout"
+                android:layout_marginTop="20dp">
+
+                <!-- ... (Tu código de ConstraintLayout va aquí) -->
+                <TextView
+                    android:id="@+id/Logoname"
+                    android:layout_width="204dp"
+                    android:layout_height="136dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Departamentos"
+                    android:textColor="@color/white"
+                    android:textSize="29sp"
+                    app:layout_constraintEnd_toStartOf="@+id/logoimagen"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:id="@+id/logoimagen"
+                    android:src="@drawable/logo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintStart_toEndOf="@id/Logoname"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/logoimagen">
+
+                    <!-- Row 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="106dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="#8B0000">
+
+                            <ImageView
+                                android:id="@+id/historiaimagen"
+                                android:layout_width="143dp"
+                                android:layout_height="162dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/img_1" />
+
+                            <TextView
+                                android:id="@+id/Depa1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/historiaimagen"
+                                android:layout_alignBottom="@+id/historiaimagen"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@+id/historiaimagen"
+                                android:text="Amazonas"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Row 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="#8B0000">
+
+                    <ImageView
+                        android:id="@+id/imagenDepa2"
+                        android:layout_width="143dp"
+                        android:layout_height="162dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/img" />
+
+                    <TextView
+                        android:id="@+id/Depa2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/imagenDepa2"
+                        android:layout_alignBottom="@+id/imagenDepa2"
+                        android:fontFamily="@font/titulos"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/imagenDepa2"
+                        android:text="Antioquia"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Row 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="#8B0000">
+
+                    <ImageView
+                        android:id="@+id/imagenDepa3"
+                        android:layout_width="143dp"
+                        android:layout_height="162dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/img_2" />
+
+                    <TextView
+                        android:id="@+id/Depa3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/imagenDepa3"
+                        android:layout_alignTop="@+id/imagenDepa3"
+                        android:layout_alignBottom="@+id/imagenDepa3"
+                        android:fontFamily="@font/titulos"
+                        android:layout_marginStart="10dp"
+                        android:text="Arauca"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="#8B0000">
+
+                    <ImageView
+                        android:id="@+id/imagenDepa4"
+                        android:layout_width="143dp"
+                        android:layout_height="162dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/img_3" />
+
+                    <TextView
+                        android:id="@+id/Depa4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/titulos"
+                        android:layout_toEndOf="@+id/imagenDepa4"
+                        android:layout_alignTop="@+id/imagenDepa4"
+                        android:layout_alignBottom="@+id/imagenDepa4"
+                        android:layout_marginStart="10dp"
+                        android:text="Atlantico"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Menú lateral (NavigationView) -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        android:background="@color/black"
+        app:itemIconTint="#8B0000"
+        app:itemTextColor="@color/white"/>
+</androidx.drawerlayout.widget.DrawerLayout>
