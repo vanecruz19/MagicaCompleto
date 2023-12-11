@@ -1,4 +1,4 @@
-package com.example.magicacompleto.model.response.response
+package com.example.transportproyecto.model.response
 
 import com.google.gson.annotations.SerializedName
 
