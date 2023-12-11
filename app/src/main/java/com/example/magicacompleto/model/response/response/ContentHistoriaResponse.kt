@@ -1,6 +1,6 @@
-package com.example.transportproyecto.model.response
+package com.example.magicacompleto.model.response.response
 
-data class ContentResponse(
+data class ContentHistoriaResponse(
     val id: String,
     val user_id: String,
 )

@@ -1,4 +1,4 @@
-package com.example.transportproyecto.views.adapters
+package com.example.magicacompleto.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,14 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.transportproyecto.R
-import com.example.transportproyecto.model.Foro
+import com.example.magicacompleto.R
+import com.example.magicacompleto.model.response.Histori
 
 
-class ForoAdapter(
+class HistoriaAdapter(
     val context: Context,
-    var listaComment: List<Foro>
-): RecyclerView.Adapter<ForoAdapter.ViewHolder>() {
+    var listaComment: List<Histori>
+): RecyclerView.Adapter<HistoriaAdapter.ViewHolder>() {
 
     class ViewHolder(item: View): RecyclerView.ViewHolder(item) {
         val image = item.findViewById(R.id.image) as ImageView
@@ -33,16 +33,16 @@ class ForoAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val foro = listaComment[position]
+        val histori = listaComment[position]
 
         // Utiliza la biblioteca Glide para cargar la imagen desde la URL en el ImageView
         Glide.with(context)
-            .load(foro.image)
+            .load(histori.image)
             .into(holder.image)
 
         // Establece el nombre y el comentario en los TextView
-        holder.name.text = foro.name
-        holder.commment.text = foro.comment
+        holder.name.text = histori.name
+        holder.commment.text = histori.comment
 
         }
     }

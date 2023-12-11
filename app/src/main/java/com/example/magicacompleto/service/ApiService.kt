@@ -1,8 +1,8 @@
 package com.example.magicacompleto.service
 
-import com.example.magicacompleto.MostraHistorias
 import com.example.magicacompleto.model.request.LoginRequest
 import com.example.magicacompleto.model.request.RegisterRequest
+import com.example.magicacompleto.model.response.Histori
 import com.example.magicacompleto.model.response.LoginResponse
 import com.example.magicacompleto.model.response.RegisterResponse
 import com.example.magicacompleto.model.response.request.CrearhRequest
@@ -25,10 +25,13 @@ interface ApiService {
     @POST("/api/chistorias")  // Cambia la URL según la estructura de tu API
     fun SubirHC(@Body CrearhRequest: CrearhRequest): Call<CrearhResponse>
 
-    @GET ("/api/mostrarhistorias")
-     suspend fun obtenerHistoria(
+    @GET("/api/comments")
+    suspend fun obtenerHistoria(): Response<List<Histori>>
+
+    @GET("/api/comments")
+    suspend fun obtenerHistoria(
         @Query("character") nombre: String
-    ): Response<List<MostraHistorias>>
+    ): Response<List<Histori>>
 
 
 }

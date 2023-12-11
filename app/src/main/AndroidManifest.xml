@@ -39,9 +39,7 @@
         <activity
             android:name=".Departamentos.DepaAmazonas"
             android:exported="false" />
-        <activity
-            android:name=".MostraHistorias"
-            android:exported="false" />
+
         <activity
             android:name=".Historias"
             android:exported="false" />

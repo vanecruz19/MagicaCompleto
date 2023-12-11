@@ -1,8 +1,8 @@
-package com.example.transportproyecto.model
+package com.example.magicacompleto.model.response
 
 import com.google.gson.annotations.SerializedName
 
-data class Foro(
+data class Histori(
     @SerializedName("id")
     val id: Int,
     @SerializedName("name")
